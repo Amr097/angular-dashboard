@@ -1,0 +1,12 @@
+@import "../styles.scss";
+
+main {
+  background: $white;
+  display: grid;
+  grid-template-columns: [news-start] 25% [news-end board-start] 1fr [board-end menu-start] 20% [menu-end];
+  overflow-x: hidden;
+
+  @media screen and (width< 54.375em) {
+    overflow-x: visible;
+  }
+}

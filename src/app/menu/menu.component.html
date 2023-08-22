@@ -1,0 +1,64 @@
+<div class="menu">
+  <!-- <input type="checkbox" class="menu__checkbox" id="nav-toggle" />
+  <label for="nav-toggle" class="menu__btn">
+    <span class="menu__icon">&nbsp;</span>
+  </label>
+
+  <ul tabindex="0" id="hamMenu" class="menu__list">
+    <li *ngFor="let shopItem of shopItems" class="menu__item">
+      <button class="menu__shop">Shop</button>
+      <ul class="menu__shop--list">
+        <li *ngFor="let subItem of shopItem.subItems" class="menu__shop--item">
+          <a href="#{{ subItem }}" (click)="unCheckMenu()">{{ subItem }}</a>
+        </li>
+      </ul>
+    </li>
+    <li *ngFor="let item of menuItems" class="menu__item">
+      <a href="#{{ item }}" (click)="unCheckMenu()">{{ item }}</a>
+    </li>
+  </ul> -->
+  <img src="assets/images/Group 80.svg" class="logo" alt="logo" />
+  <hr />
+  <div class="main">
+    <h1 class="menu-micro">الرئيسية</h1>
+    <ul class="main__list">
+      <li class="main__item">
+        <img src="/assets/images/home.svg" alt="home-icon" class="home-icon" />
+        الرئيسية
+      </li>
+
+      <li *ngFor="let mainItem of mainItems" class="main__item">
+        <input
+          type="checkbox"
+          class="main__checkbox"
+          [id]="'menu-toggle-' + mainItem"
+        />
+        <img src="/assets/images/home.svg" alt="home-icon" class="home-icon" />
+        <label [for]="'menu-toggle-' + mainItem" (click)="unCheckMenu()"
+          >{{ mainItem }}
+        </label>
+        <label class="arrow-icon" [for]="'menu-toggle-' + mainItem">
+          <img src="/assets/images/arrow-down.svg" alt="home-icon" />
+        </label>
+
+        <ul class="main__mini">
+          <img src="/assets/images/Group 4531.svg" alt="Menu mini indicator" />
+          <li *ngFor="let miniItem of miniItems" class="main__mini--item">
+            <a href="#{{ miniItem }}" (click)="unCheckMenu()">{{ miniItem }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="account">
+    <h1 class="menu-micro">الحساب</h1>
+    <ul class="menu__list">
+      <li *ngFor="let accountItem of accountItems" class="main__item">
+        <img src="{{ accountItem.src }}" alt="account-icon" class="home-icon" />
+        <a href="{{ accountItem.src }}" (click)="unCheckMenu()"
+          >{{ accountItem.name }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
