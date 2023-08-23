@@ -1,12 +1,27 @@
 //fonts
 $poppins: "Poppins", sans-serif;
 $neosans-arabic: "Neo Sans Arabic", sans-serif;
+$inter: "Inter", sans-serif;
 
 //colors
 
 $white: #fff;
-$secondary-grey-300: #f4f7fe;
-$black-primary: #2e2e2e;
 $white-2: #fffffc;
-$gray-light-2: #3c3939ac;
+
+$black-primary: #2e2e2e;
+$black-2: #1c1c28;
+
 $yellow-1: #feee00;
+
+$grey-primary: #b4b4b4;
+$secondary-grey-300: #f4f7fe;
+$gray-light-2: #3c3939ac;
+$grey-light-3: #76778b;
+
+//box shadow
+
+$shadow-1: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+
+:root {
+  --grayscale: #292d32;
+}

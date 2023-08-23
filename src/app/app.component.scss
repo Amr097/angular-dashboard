@@ -3,10 +3,43 @@
 main {
   background: $white;
   display: grid;
-  grid-template-columns: [news-start] 25% [news-end board-start] 1fr [board-end menu-start] 20% [menu-end];
+  grid-template-columns: [menu-start] 15% [menu-end board-start] 1fr [board-end news-start] 28% [news-end];
+  grid-template-rows: max-content 1fr;
+  direction: rtl;
   overflow-x: hidden;
 
   @media screen and (width< 54.375em) {
     overflow-x: visible;
+  }
+
+  .logo {
+    grid-column: 1 /-1;
+    grid-row: 1 / span 1;
+    justify-self: flex-start;
+    padding: 2rem 5rem 0 0;
+  }
+
+  .menu {
+    height: 100%;
+    text-align: right;
+    padding: 2rem 0;
+    display: grid;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    color: $black-primary;
+    grid-column: menu-start / menu-end;
+    grid-row: 2/-1;
+  }
+
+  .news {
+    grid-column: news-start / news-end;
+    grid-row: 2/-1;
+    border-top: 1.2px solid #eeedf2;
+    padding: 2rem 1.5rem;
+  }
+
+  .board {
+    grid-column: board-start / board-end;
   }
 }

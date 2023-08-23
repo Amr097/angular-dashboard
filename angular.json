@@ -82,7 +82,7 @@
             "styles": [
               "src/styles.scss",
               "src/assets/scss-utils/typography.scss",
-              "src/assets/scss-utils/variables.scss",
+              "src/assets/scss-utils/variables.scss"
             ],
             "scripts": []
           }

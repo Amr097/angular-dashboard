@@ -1,1 +1,105 @@
-<p>news works!</p>
+<div class="news__container">
+  <div class="datepicker">
+    <div class="datepicker__right">
+      <h4 class="text-primary text-black">تقويم المواعيد</h4>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="8"
+        height="13"
+        viewBox="0 0 8 13"
+        fill="none"
+        class="arrow-icon"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M-1.04904e-05 11.4827L1.33058 12.7918L7.64108 6.58339L1.33058 0.375L-1.04904e-05 1.68406L4.97991 6.58339L-1.04904e-05 11.4827Z"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="8"
+        height="13"
+        viewBox="0 0 8 13"
+        fill="none"
+        class="arrow-icon"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M8.39109 11.4827L7.0605 12.7918L0.75 6.58339L7.0605 0.375L8.39109 1.68406L3.41118 6.58339L8.39109 11.4827Z"
+        />
+      </svg>
+    </div>
+    <div class="datepicker__left">
+      <img
+        src="/assets/images/calendar-2.svg"
+        alt="calender icon"
+        class="calender-icon"
+      />
+      <p class="text-secondary text-gray">مارس 2023</p>
+      <img src="/assets/images/arrow-down.svg" alt="arrow icon" />
+    </div>
+    <div class="calendar">
+      <ul class="calendar__list">
+        <li *ngFor="let scheduleItem of scheduleItems" class="calendar__item">
+          <p class="calendar__item--day">{{ scheduleItem.day }}</p>
+          <p class="calendar__item--date">{{ scheduleItem.date }}</p>
+          <div class="calendar__item--dots">
+            <img
+              *ngFor="let dot of scheduleItem.dots"
+              [src]="'/assets/images/' + dot + '.svg'"
+              [alt]="dot"
+            />
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <ul class="feed">
+    <li
+      class="post"
+      [style.backgroundColor]="cardItem.color"
+      [style.color]="cardItem.fontColor"
+      *ngFor="let cardItem of cardItems"
+    >
+      <p class="text-primary">{{ cardItem.content }}</p>
+      <div class="post__time text-primary" [style.color]="cardItem.timeColor">
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          [style.fill]="cardItem.timeColor"
+        >
+          <g id="vuesax/outline/clock">
+            <g id="clock">
+              <path
+                id="Vector"
+                d="M8 15.1308C4.29375 15.1308 1.28125 12.1161 1.28125 8.4072C1.28125 4.6983 4.29375 1.68364 8 1.68364C11.7063 1.68364 14.7188 4.6983 14.7188 8.4072C14.7188 12.1161 11.7063 15.1308 8 15.1308ZM8 2.62181C4.8125 2.62181 2.21875 5.21742 2.21875 8.4072C2.21875 11.597 4.8125 14.1926 8 14.1926C11.1875 14.1926 13.7813 11.597 13.7813 8.4072C13.7813 5.21742 11.1875 2.62181 8 2.62181Z"
+              />
+              <path
+                id="Vector_2"
+                d="M10.3188 10.8652C10.2375 10.8652 10.1563 10.8464 10.0813 10.7964L8.14375 9.63932C7.6625 9.35161 7.30625 8.71991 7.30625 8.16326V5.59893C7.30625 5.3425 7.51875 5.12984 7.775 5.12984C8.03125 5.12984 8.24375 5.3425 8.24375 5.59893V8.16326C8.24375 8.38843 8.43125 8.71991 8.625 8.83249L10.5625 9.98957C10.7875 10.1209 10.8563 10.4086 10.725 10.6338C10.6313 10.7839 10.475 10.8652 10.3188 10.8652Z"
+                fill-opacity="0.6"
+              />
+            </g>
+          </g>
+        </svg>
+
+        {{ cardItem.time }}
+      </div>
+      <div class="post__user">
+        <img [src]="'/assets/images/' + cardItem.image" alt="clock-icon" />
+        <p class="text-primary text-black">
+          {{ cardItem.name }}
+        </p>
+        <button class="post__user--arrow">
+          <img src="/assets/images/Arrow - Left.svg" alt="arrow-icon" />
+        </button>
+      </div>
+    </li>
+  </ul>
+</div>

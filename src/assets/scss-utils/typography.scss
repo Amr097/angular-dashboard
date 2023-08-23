@@ -1,15 +1,22 @@
 .menu-micro {
   color: #cfcfcf;
-  //   -webkit-leading-trim: both;
-  //   -moz-leading-trim: both;
-  //   leading-trim: both;
-  //   -webkit-text-edge: cap;
-  //   -moz-text-edge: cap;
-  //   text-edge: cap;
   margin-bottom: 1.1rem;
   margin-right: 1.5rem;
   font-family: $neosans-arabic;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
+}
+
+.text-primary {
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.text-black {
+  color: $black-2;
+}
+
+.text-grey {
+  color: $grey-light-3;
 }
