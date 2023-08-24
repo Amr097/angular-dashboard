@@ -11,6 +11,18 @@
 .text-primary {
   font-weight: 500;
   font-size: 1.05rem;
+
+  @media screen and (width<= 46.0625em) {
+    font-size: 1.05em;
+  }
+
+  @media screen and (width <= 39.6875em) {
+    font-size: 0.8em;
+  }
+
+  @media screen and (width <= 25.875em) {
+    font-size: 0.7em;
+  }
 }
 
 .text-secondary {
@@ -22,6 +34,10 @@
   font-size: 1.3rem;
   font-weight: 700;
   font-family: $inter;
+
+  @media screen and (width <= 39.6875em) {
+    font-size: 1.6rem;
+  }
 }
 
 .text-tertiary--2 {
@@ -70,12 +86,20 @@
   font-weight: 700;
   line-height: 250%;
   color: #23262f;
+
+  @media screen and (width <= 39.6875em) {
+    font-size: 1.6rem;
+  }
 }
 
 .card-title-small {
   color: #787486;
   font-size: 0.9rem;
   font-weight: 400;
+
+  @media screen and (width <= 39.6875em) {
+    font-size: 1.3rem;
+  }
 }
 
 .text-black {

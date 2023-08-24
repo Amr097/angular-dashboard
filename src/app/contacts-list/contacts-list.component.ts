@@ -59,7 +59,7 @@ export class ContactsListComponent {
     },
     {
       id: 'ID-15877',
-      name: 'اسم إفتراضي جديد مثال',
+      name: 'اسم إفتراضي جديد ',
       email: 'Example@company.com',
       workDays: {
         س: true,
@@ -82,7 +82,7 @@ export class ContactsListComponent {
     },
     {
       id: 'ID-15877',
-      name: 'اسم إفتراضي جديد مثال',
+      name: 'اسم إفتراضي جديد ',
       email: 'Example@company.com',
       workDays: {
         س: true,
@@ -104,7 +104,7 @@ export class ContactsListComponent {
     },
     {
       id: 'ID-15877',
-      name: 'اسم إفتراضي جديد مثال',
+      name: 'اسم إفتراضي جديد ',
       email: 'Example@company.com',
       workDays: {
         س: true,
@@ -126,7 +126,7 @@ export class ContactsListComponent {
     },
     {
       id: 'ID-15877',
-      name: 'اسم إفتراضي جديد مثال',
+      name: 'اسم إفتراضي جديد ',
       email: 'Example@company.com',
       workDays: {
         س: false,
@@ -192,7 +192,7 @@ export class ContactsListComponent {
     },
     {
       id: 'ID-15877',
-      name: 'اسم إفتراضي جديد مثال',
+      name: 'اسم إفتراضي جديد ',
       email: 'Example@company.com',
       workDays: {
         س: true,
