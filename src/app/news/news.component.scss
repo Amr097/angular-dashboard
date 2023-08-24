@@ -63,6 +63,7 @@
       &:hover {
         padding: 1.5rem 0.4rem;
         background-color: $yellow-1;
+        font-weight: 700;
       }
 
       &:hover .calendar__item--day {
@@ -178,15 +179,17 @@
         transition: 0.2s ease-in-out;
         display: flex;
         align-items: center;
+        transform: translateY(1rem);
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
         &:hover {
-          transform: translateY(-0.3rem);
+          transform: translateY(0.7rem);
           box-shadow: $shadow-1;
         }
 
         &:active {
-          transform: translateY(0rem);
-          box-shadow: none;
+          transform: translateY(1.1rem);
+          box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
         }
       }
     }

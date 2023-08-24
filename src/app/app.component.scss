@@ -3,7 +3,7 @@
 main {
   background: $white;
   display: grid;
-  grid-template-columns: [menu-start] 15% [menu-end board-start] 1fr [board-end news-start] 28% [news-end];
+  grid-template-columns: [menu-start] 15% [menu-end board-start] 1fr [board-end news-start] 25% [news-end];
   grid-template-rows: max-content 1fr;
   direction: rtl;
   overflow-x: hidden;
@@ -41,5 +41,8 @@ main {
 
   .board {
     grid-column: board-start / board-end;
+    background-color: $grey-background;
+    border-radius: 0.5rem;
+    padding: 2rem;
   }
 }

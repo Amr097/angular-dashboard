@@ -1,1 +1,85 @@
-<p></p>
+<div class="user">
+  <div class="user__info">
+    <h4 class="card-title">الشخص الأول</h4>
+    <time class="card-title-small user__date"
+      >10 مايو- 10يونيو
+      <img src="/assets/images/arrow--down.svg" alt="arrow icon" />
+    </time>
+    <ul class="user__list">
+      <li class="user__item" *ngFor="let readItem of readingItems">
+        <div class="card-title-small user__item--title">
+          <img [src]="readItem.dot" alt="dot icon" />{{ readItem.title }}
+        </div>
+        <span class="text-tertiary">{{ readItem.value }}</span>
+      </li>
+    </ul>
+    <div class="green__container">
+      <img
+        src="/assets/images/avatar-large.png"
+        alt="user image"
+        class="user-image"
+      />
+      <p class="text-primary card-exec-text">الموظف الأول</p>
+      <img
+        src="/assets/images/green.svg"
+        alt="dot icon"
+        class="dot dot-green"
+      />
+      <img
+        src="/assets/images/purple.svg"
+        alt="dot icon"
+        class="dot dot-purple"
+      />
+      <img
+        src="/assets/images/orange.svg"
+        alt="dot icon"
+        class="dot dot-orange"
+      />
+      <div class="purple__container"></div>
+      <div class="orange__container"></div>
+    </div>
+  </div>
+
+  <div class="user__stats">
+    <h4 class="card-title user__stats--title">إحصائيات</h4>
+    <div class="user__piechart">
+      <img
+        src="/assets/images/Pie-Chart.svg"
+        alt="pie chart image"
+        class="user__piechart--image"
+      />
+      <p class="text-tertiary--2 user__piechart--text">
+        158 <br />
+        <span class="text-grey-medium">جهاز</span>
+      </p>
+    </div>
+
+    <div class="user__choice">
+      <p class="text-tertiary--3 user__choice-1">
+        108 <br />
+        <span class="text-grey-medium">الخيار الأول</span>
+      </p>
+      <p class="text-tertiary--3 user__choice-2">
+        108 <br />
+        <span class="text-grey-medium">الخيار الثاني</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="user__others">
+    <ul class="others__list">
+      <li
+        class="others__item"
+        *ngFor="let otherReadingItem of otherReadingItems"
+        [style.background]="
+          'url(' + otherReadingItem.background + ') no-repeat'
+        "
+        [style.background-color]="otherReadingItem.backgroundColor"
+      >
+        <h5 class="others__title">{{ otherReadingItem.title }}</h5>
+        <span class="others__value">{{ otherReadingItem.value }}</span>
+        <img [src]="otherReadingItem.icon" alt="icon" class="others__icon" />
+      </li>
+    </ul>
+  </div>
+</div>

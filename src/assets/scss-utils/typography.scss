@@ -13,6 +13,71 @@
   font-size: 1.05rem;
 }
 
+.text-secondary {
+  font-size: 1.05rem;
+  font-weight: 400;
+}
+
+.text-tertiary {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: $inter;
+}
+
+.text-tertiary--2 {
+  color: #1c1c28;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.text-tertiary--3 {
+  color: #1c1c28;
+  font-family: Poppins;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.text-grey-medium {
+  color: #b6baca;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.dropdown-title-text {
+  color: #2e2e2e;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: Neo Sans Arabic;
+  line-height: 16.699px; /* 175% */
+  text-align: right;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.dropdown-item-text {
+  color: #6c6c6c;
+  font-family: Neo Sans Arabic;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 10.735px; /* 128.571% */
+  margin-left: auto;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 250%;
+  color: #23262f;
+}
+
+.card-title-small {
+  color: #787486;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
 .text-black {
   color: $black-2;
 }

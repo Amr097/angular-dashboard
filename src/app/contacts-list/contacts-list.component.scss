@@ -1,0 +1,235 @@
+@import "../../styles.scss";
+
+.contacts-board {
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  height: 100%;
+  .contacts {
+    padding: 2rem 0;
+    .bar {
+      display: grid;
+      grid-template-columns: repeat(3, max-content) 1fr;
+      grid-column-gap: 0.8rem;
+      align-items: center;
+      width: 100%;
+
+      &__icon {
+        background-color: rgba(255, 255, 255, 1);
+        border: solid 0.5px rgba(146, 161, 173, 0.4);
+        border-radius: 0.65rem;
+        padding: 0.9rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.412);
+        }
+      }
+
+      &__button {
+        background-color: $yellow-1;
+        padding: 0.6rem 1.9rem;
+        border-radius: 0.6rem;
+        margin-right: auto;
+        color: #1c1c28;
+        font-size: 1.25rem;
+        line-height: 2.4rem; /* 200% */
+        box-shadow: $shadow-2;
+        cursor: pointer;
+        transition: 0.15s ease-in-out;
+        &:hover {
+          transform: translateY(-1.5px);
+          box-shadow: $shadow-1;
+        }
+        &:active {
+          transform: translateY(0px);
+          box-shadow: $shadow-3;
+        }
+      }
+    }
+  }
+
+  .search {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    background-color: $white;
+    border-radius: 0.5rem;
+    border: solid 0.5px rgba(146, 161, 173, 0.4);
+    width: 27rem;
+    gap: 0.5rem;
+    padding: 0 1rem;
+
+    &__input {
+      background-color: transparent;
+      width: 100%;
+      border: none;
+      outline: none;
+      border-radius: 1rem;
+      padding: 1rem 0;
+      transition: all 0.25s ease-in-out;
+      &::placeholder {
+        color: rgba(146, 161, 173, 0.4);
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      &:focus ~ .search__button {
+        margin: 0;
+      }
+    }
+
+    &__button {
+      border: none;
+      cursor: pointer;
+      margin-right: 1rem;
+      transition: 0.2s ease-in-out;
+
+      &:active {
+        outline: none;
+        transform: scale(0.9);
+      }
+    }
+  }
+  ////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////
+  .contacts-info {
+    width: 100%;
+    outline: solid 1px black;
+    height: 100%;
+    background-color: $white;
+    padding: 1rem;
+
+    .tiles {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      border-radius: 0.2rem;
+      padding: 0.6rem 0;
+
+      &__heading {
+        color: #5a5a67;
+        width: 100%;
+        font-size: 1.03rem;
+        font-weight: 400;
+        background-color: rgba(224, 227, 233, 0.273);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 0;
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .content {
+          &__item {
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+
+            padding: 0.6rem 0;
+            border-top: 1px solid #e0e3e9;
+          }
+          &__id {
+          }
+        }
+      }
+
+      // &__settings {
+      //   position: relative;
+      //   display: flex;
+      //   justify-content: flex-end;
+      // }
+
+      // &__btn {
+      //   padding: 0.2rem 0.5rem;
+      //   background-color: transparent;
+      //   border: solid 1px transparent;
+      //   cursor: pointer;
+      //   border-radius: 0.4rem;
+
+      //   svg {
+      //     width: 1.2rem;
+      //     height: 1.2rem;
+      //     fill: grey;
+      //   }
+
+      //   &:hover {
+      //     border: solid 1px $grey-light-3;
+      //     box-shadow: $shadow-1;
+      //     transition: all 0.15s ease-in-out;
+      //   }
+
+      //   &:focus {
+      //     background-color: rgba(7, 113, 222, 1);
+      //     border: solid 1px transparent;
+      //   }
+
+      //   &:focus-within {
+      //     background-color: rgba(7, 113, 222, 1);
+      //     border: solid 1px transparent;
+      //   }
+
+      //   &:focus svg {
+      //     fill: white;
+      //   }
+
+      //   &:focus-within svg {
+      //     fill: white;
+      //   }
+
+      //   &:focus .tiles__dropdown {
+      //     opacity: 1;
+      //     transform: scaleX(1);
+      //     pointer-events: all;
+      //     height: auto;
+      //   }
+
+      //   &:focus-within .tiles__dropdown {
+      //     opacity: 1;
+      //     transform: scaleX(1);
+      //     pointer-events: all;
+      //     height: auto;
+      //   }
+      // }
+
+      // &__dropdown {
+      //   position: absolute;
+      //   width: 150%;
+      //   left: 2.5rem;
+      //   top: 1rem;
+      //   background-color: $white;
+      //   box-shadow: $shadow-1;
+      //   padding: 0.3rem;
+      //   transform: scaleX(0);
+      //   opacity: 0;
+      //   pointer-events: none;
+      //   transform-origin: left;
+      //   transition: transform 0.2s ease-in-out;
+
+      //   &--item {
+      //     display: flex;
+      //     justify-content: space-between;
+      //     align-items: center;
+      //     padding: 0.5rem;
+      //     gap: 0.5rem;
+      //     border-bottom: 0.596px solid #e1e6ee;
+
+      //     &:last-child {
+      //       border: none;
+      //       padding-bottom: 0;
+      //     }
+
+      //     input {
+      //       width: 0.8rem;
+      //       height: 0.8rem;
+      //     }
+      //   }
+    }
+  }
+  // }
+}
