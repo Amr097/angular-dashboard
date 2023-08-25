@@ -15,7 +15,7 @@ Fully responsive Figma dashboard design implementation built with Angular & styl
 - Completely responsive to all screen devices.
 - Compatible with almost all browsers, I did my best to limit my usage to the most basic and most supported CSS properties.
 - Implemented modern and smooth subtle animations and effects.
-- Drag and drop lists.
+- Drag and drop lists. note: contacts table is only draggable by the id cell.
 
 ## Directories 
 
