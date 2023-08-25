@@ -17,3 +17,8 @@ Fully responsive Figma dashboard design implementation built with Angular & styl
 - Implemented modern and smooth subtle animations and effects.
 - Drag and drop lists.
 
+## Directories 
+
+- The project was build over four components located in the app directory.
+- Images & Scss utility classes located in the assets directory.
+
