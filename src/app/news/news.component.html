@@ -58,12 +58,15 @@
   </div>
   <!-- /////////////////////////////////////////////////////////////////////////////////////// -->
   <!-- /////////////////////////////////////////////////////////////////////////////////////// -->
-  <ul class="feed">
+  <ul class="feed" cdkDropList>
     <li
       class="post"
       [style.backgroundColor]="cardItem.color"
       [style.color]="cardItem.fontColor"
-      *ngFor="let cardItem of cardItems"
+      *ngFor="let cardItem of cardItems; let i = index"
+      [id]="i"
+      cdkDrag
+      (cdkDragDropped)="dropped($event)"
     >
       <p class="text-primary">{{ cardItem.content }}</p>
       <div class="post__time text-primary" [style.color]="cardItem.timeColor">

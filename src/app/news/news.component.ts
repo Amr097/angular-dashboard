@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 interface ScheduleItem {
   day: string;
@@ -19,7 +20,6 @@ interface CardItem {
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
-
   styleUrls: ['./news.component.scss'],
 })
 export class NewsComponent {
@@ -89,4 +89,8 @@ export class NewsComponent {
       timeColor: '#76778B',
     },
   ];
+
+  dropped(event: CdkDragDrop<any[]>) {
+    moveItemInArray(this.cardItems, event.previousIndex, event.currentIndex);
+  }
 }

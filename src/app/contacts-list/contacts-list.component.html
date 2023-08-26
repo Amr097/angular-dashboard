@@ -22,8 +22,13 @@
     <ul class="tiles">
       <li class="tiles__item">
         <h5 class="tiles__heading">رقم الid</h5>
-        <ul class="content">
-          <li *ngFor="let listContent of listContents" class="content__item">
+        <ul class="content" cdkDropList>
+          <li
+            *ngFor="let listContent of listContents"
+            class="content__item"
+            cdkDrag
+            (cdkDragDropped)="dropped($event)"
+          >
             <p class="content__id">
               {{ listContent.id }}
             </p>
@@ -167,55 +172,5 @@
         </ul>
       </li>
     </ul>
-
-    <!-- /////////////////////////////////////////////////// -->
-    <!-- /////////////////////////////////////////////////// -->
-    <!-- <ul class="content">
-      <li *ngFor="let listContent of listContents" class="content__item">
-        <p class="content__id">{{ listContent.id }}</p>
-        <p class="content__name" *ngIf="listContent.name.length < 20">
-          {{ listContent.name }}
-        </p>
-        <p class="content__name" *ngIf="listContent.name.length > 20">
-          {{ listContent.name.substr(0, 20) }}...
-          <span class="content__name--tooltip"> {{ listContent.name }}</span>
-        </p>
-        <p class="content__email">{{ listContent.email }}</p>
-        <div class="content__workdays">
-          <span
-            *ngFor="let workday of listContent.workDays | keyvalue"
-            class="content__workdays--item"
-            [style.color]="workday.value ? 'green' : 'red'"
-            [style.color]="workday.value ? 'green' : 'red'"
-            >{{ workday.key }}
-          </span>
-        </div>
-        <div class="content__files">
-          <img
-            *ngIf="listContent.files.image"
-            class="content__files--image"
-            [src]="listContent.files.image"
-            alt="icon"
-          />
-          <img
-            *ngIf="!listContent.files.image"
-            class="content__files--image"
-            src="/assets/images/clipboardtext.svg"
-            alt="icon"
-          />
-          <p class="content__files--name">
-            {{ listContent.files.name }}
-          </p>
-          <p class="content__files--size" *ngIf="listContent.files.ext">
-            {{ listContent.files.size }} . {{ listContent.files.ext }}
-          </p>
-          <p class="content__files--size" *ngIf="!listContent.files.ext">
-            {{ listContent.files.size }}
-          </p>
-        </div>
-
-        <img [src]="listContent.icon" alt="icon" />
-      </li>
-    </ul> -->
   </div>
 </div>

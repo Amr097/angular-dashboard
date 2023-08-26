@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 interface ListTitle {
   title: string;
@@ -59,8 +59,8 @@ export class ContactsListComponent {
     },
     {
       id: 'ID-15877',
-      name: 'اسم إفتراضي جديد ',
-      email: 'Example@company.com',
+      name: 'محمد',
+      email: 'DRAG@TEST.com',
       workDays: {
         س: true,
         ح: true,
@@ -72,9 +72,9 @@ export class ContactsListComponent {
       },
 
       files: {
-        name: 'كتالوجالشركة.pdf',
-        size: '9mb',
-        ext: 'PDF',
+        name: 'D.pdf',
+        size: '1mb',
+        ext: 'DOX',
         image: '',
       },
 
@@ -213,4 +213,8 @@ export class ContactsListComponent {
       icon: '/assets/images/threedots.svg',
     },
   ];
+
+  dropped(event: CdkDragDrop<any[]>) {
+    moveItemInArray(this.listContents, event.previousIndex, event.currentIndex);
+  }
 }
