@@ -1,9 +1,0 @@
-{
-  "hosting": [
-    {
-      "target": "evaluation",
-      "source": ".",
-      "frameworksBackend": {}
-    }
-  ]
-}
