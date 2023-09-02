@@ -24,8 +24,9 @@
         <h5 class="tiles__heading">رقم الid</h5>
         <ul class="content" cdkDropList>
           <li
-            *ngFor="let listContent of listContents"
+            *ngFor="let listContent of listContents; let i = index"
             class="content__item"
+            [id]="i + listContent.id"
             cdkDrag
             (cdkDragDropped)="dropped($event)"
           >
@@ -39,7 +40,34 @@
       <li class="tiles__item">
         <h5 class="tiles__heading">الإسم بالكامل</h5>
         <ul class="content">
-          <li *ngFor="let listContent of listContents" class="content__item">
+          <!-- <li
+            *ngFor="let listContent01 of listContents01; let i = index"
+            class="content__item"
+            [id]="i + listContent01.name"
+          >
+            <p class="content__name" *ngIf="listContent01.name.length < 20">
+              {{ listContent01.name }}
+            </p>
+            <p
+              class="content__name"
+              *ngIf="listContent01.name.length > 20"
+              [style.cursor]="'pointer'"
+            >
+              {{ listContent01.name.substr(0, 20) }}...
+              <span
+                class="content__name--tooltip"
+                *ngIf="listContent01.name.length > 20"
+              >
+                {{ listContent01.name }}</span
+              >
+              <span class="content__name--tip"></span>
+            </p>
+          </li> -->
+          <li
+            *ngFor="let listContent of listContents; let i = index"
+            class="content__item"
+            [id]="i + listContent.name"
+          >
             <p class="content__name" *ngIf="listContent.name.length < 20">
               {{ listContent.name }}
             </p>

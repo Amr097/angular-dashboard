@@ -20,6 +20,20 @@ interface ListContent {
   icon: string;
 }
 
+interface ListContent01 {
+  id: string;
+  name: string;
+  email: string;
+  workDays: Record<string, boolean>;
+  files: {
+    name: string;
+    size: string;
+    ext: string;
+    image: string;
+  };
+  icon: string;
+}
+
 @Component({
   selector: 'app-contacts-list',
   templateUrl: './contacts-list.component.html',
@@ -190,6 +204,31 @@ export class ContactsListComponent {
       },
       icon: '/assets/images/threedots.svg',
     },
+    {
+      id: 'ID-15877',
+      name: 'اسم إفتراضي جديد ',
+      email: 'Example@company.com',
+      workDays: {
+        س: true,
+        ح: true,
+        ن: true,
+        ث: true,
+        ر: true,
+        خ: true,
+        ج: true,
+      },
+
+      files: {
+        name: 'كتالوجالشركة.pdf',
+        size: '9mb',
+        ext: '',
+        image: '',
+      },
+      icon: '/assets/images/threedots.svg',
+    },
+  ];
+
+  listContents01: ListContent01[] = [
     {
       id: 'ID-15877',
       name: 'اسم إفتراضي جديد ',

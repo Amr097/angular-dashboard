@@ -16,19 +16,19 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10px
 
   @media screen and (width <= 45.5625em) {
     font-size: 55.5%;
   }
 
   @media screen and (width <= 39.6875em) {
-    font-size: 50%;
+    font-size: 52.5%;
   }
 
-  @media screen and (width <= 25.875em) {
-    font-size: 35%;
-  }
+  // @media screen and (width <= 25.875em) {
+  //   font-size: 35%;
+  // }
 }
 
 a {
